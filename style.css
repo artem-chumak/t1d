@@ -353,7 +353,7 @@ img {
 
 .form__text-box {
   max-height: 444px;
-  padding: 16px;
+  padding: 16px 14% 16px 16px;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -361,6 +361,25 @@ img {
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
+  scrollbar-width: 8px;
+  margin-right: 10px;
+  /* scrollbar-color: #BFD4EC #fff; */
+  /* scrollbar-width: thin; */
+}
+
+.form__text-box::-webkit-scrollbar {
+  width: 8px;
+}
+.form__text-box::-webkit-scrollbar-track {
+  margin: 16px 0 0 0;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+}
+
+.form__text-box::-webkit-scrollbar-thumb {
+  height: 126px;
+  border-radius: 8px;
+  background-color: #BFD4EC;
 }
 
 .form__text-box > ul {
@@ -407,6 +426,8 @@ img {
   height: 0;
   position: relative;
   margin: 0;
+  left: -30px;
+  top: 10px;
 }
 
 .form__action-box > label > input::before {
@@ -416,10 +437,11 @@ img {
   height: 24px;
   border-radius: 4px;
   border: 1px solid rgba(38, 56, 86, 0.60);
-  top: 4px;
-  left: -40px;
+  top: -6px;
+  left: -10px;
   transition: background .3s ease;
   cursor: pointer;
+  background: #F2F4F7;
 }
 
 .form__action-box > label > input:checked::before {
@@ -429,23 +451,8 @@ img {
   height: 24px;
   border-radius: 4px;
   border: 1px solid #6786AC;
-  top: 4px;
-  left: -40px;
-  background: #6786AC;
-  background-image: url(./images/done.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.form__action-box > label > input:checked::before {
-  position: absolute;
-  content: '';
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
-  border: 1px solid #6786AC;
-  top: 4px;
-  left: -40px;
+  top: -6px;
+  left: -10px;
   background: #6786AC;
   background-image: url(./images/done.svg);
   background-repeat: no-repeat;
