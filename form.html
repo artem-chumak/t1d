@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Personal form</title>
+  </head>
+
+  <body class="form-page">
+    <header class="header">
+      <div class="header__content">
+        <a href="https://genomelink.io/" target="_blank">
+          <img src="./images/logo.png" alt="logo" />
+        </a>
+      </div>
+    </header>
+
+    <section class="form-block">
+      <form class="form">
+        <div class="form-header">
+          <h1>Enrol form</h1>
+          <p>
+            This questionnaire collects your personal details and shipping
+            address, which are critical for sending you the test kit. Please
+            fill out all fields. The information provided is strictly will not
+            be used for any other purposes.
+          </p>
+        </div>
+
+        <fieldset class="form-block-one">
+          <h2>1. Personal details</h2>
+          <div class="block-one_age">
+            <h3>Age</h3>
+            <label for="ages">
+              <input id="ages" type="number" min="1" max="120" />
+            </label>
+          </div>
+
+          <div class="block-one_sex">
+            <h3>Sex <span>(Select one)</span></h3>
+            <div class="sex-box-inputs">
+              <label for="female">
+                <input
+                  name="sex"
+                  type="radio"
+                  id="female"
+                  type="text"
+                  value="female"
+                />
+                <p>Female</p>
+              </label>
+
+              <label for="male">
+                <input name="sex" id="male" type="radio" value="male" />
+                <p>Male</p>
+              </label>
+
+              <label for="not">
+                <input name="sex" id="not" type="radio" value="not" />
+                <p>Prefer not to say</p>
+              </label>
+            </div>
+          </div>
+
+          <div class="block-one_ethn">
+            <h3>Ethnicity <span>(Select all that apply)</span></h3>
+            <div class="ethn-box-inputs">
+              <label for="white">
+                <input
+                  name="ethnicity"
+                  id="white"
+                  type="checkbox"
+                  value="white"
+                />
+                <p>White</p>
+              </label>
+              <label for="latino">
+                <input
+                  name="ethnicity"
+                  id="latino"
+                  type="checkbox"
+                  value="latino"
+                />
+                <p>Hispanic or Latino</p>
+              </label>
+              <label for="black">
+                <input
+                  name="ethnicity"
+                  id="black"
+                  type="checkbox"
+                  value="black"
+                />
+                <p>Black or African American</p>
+              </label>
+              <label for="native">
+                <input
+                  name="ethnicity"
+                  id="native"
+                  type="checkbox"
+                  value="native"
+                />
+                <p>Native American or Alaska Native</p>
+              </label>
+              <label for="easian">
+                <input
+                  name="ethnicity"
+                  id="easian"
+                  type="checkbox"
+                  value="easian"
+                />
+                <p>East Asian</p>
+              </label>
+              <label for="sasian">
+                <input
+                  name="ethnicity"
+                  id="sasian"
+                  type="checkbox"
+                  value="sasian"
+                />
+                <p>South Asian</p>
+              </label>
+              <label for="pacific">
+                <input
+                  name="ethnicity"
+                  id="pacific"
+                  type="checkbox"
+                  value="pacific"
+                />
+                <p>Native Hawaiian or Other Pacific Islander</p>
+              </label>
+              <label for="other">
+                <input
+                  name="ethnicity"
+                  id="other"
+                  type="checkbox"
+                  value="other"
+                />
+                <p>Other</p>
+              </label>
+              <label for="notn">
+                <input name="ethnicity" id="notn" type="checkbox" value="not" />
+                <p>Prefer not to say</p>
+              </label>
+            </div>
+          </div>
+
+          <div class="block-one_hws">
+            <h3>Height & weight</h3>
+            <div class="hws-box-inputs">
+              <label for="standard">
+                <input
+                  name="mesure-type"
+                  id="standard"
+                  type="radio"
+                  value="standard"
+                />
+                <p>Standard</p>
+              </label>
+
+              <label for="metric">
+                <input
+                  name="mesure-type"
+                  id="metric"
+                  type="radio"
+                  value="metric"
+                />
+                <p>Metric</p>
+              </label>
+            </div>
+          </div>
+
+          <div class="block-one_hw">
+            <div class="hw-one-box">
+              <h4>Height   <span>12 inches per foot, 5ft = 60 inches</span></h4>
+              <div class="hw-one-box-inputs">
+                <label for="height-one">
+                  <input
+                    id="height-one"
+                    type="number"
+                    placeholder="foot"
+                    min="0"
+                  />
+                </label>
+                <label for="height-two">
+                  <input
+                    id="height-two"
+                    type="number"
+                    placeholder="inch"
+                    min="0"
+                  />
+                </label>
+              </div>
+            </div>
+
+            <div class="hw-two-box">
+              <h4>Weight</h4>
+              <label for="weight">
+                <input id="weight" type="number" placeholder="pound" min="1" />
+              </label>
+            </div>
+          </div>
+
+          <button type="button" id="button-continue">continue</button>
+        </fieldset>
+
+        <fieldset class="form-block-two hidden">
+          <h2>2. Shipping details</h2>
+          <div>
+            <label for="name">
+              <input id="name" type="text" required />
+            </label>
+            <label for="last-name">
+              <input id="last-name" type="text" required />
+            </label>
+          </div>
+          <div>
+            <label for="adress">
+              <input id="adress" type="text" required />
+            </label>
+            <label for="adress-two">
+              <input id="adress-two" type="text" />
+            </label>
+          </div>
+          <div>
+            <label for="city">
+              <input id="city" type="text" required />
+            </label>
+            <label for="zip">
+              <input id="zip" type="text" required />
+            </label>
+          </div>
+          <div>
+            <select id="country" name="country" required>
+              <option value="" disabled selected>country</option>
+            </select>
+            <select id="state" name="state" required>
+              <option value="" disabled selected>state</option>
+            </select>
+          </div>
+
+          <textarea name="note" id="note" cols="30" rows="3"> </textarea>
+
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <template id="temp-option">
+      <option class="option" value=""></option>
+    </template>
+
+    <script src="./script-two.js"></script>
+  </body>
+</html>
