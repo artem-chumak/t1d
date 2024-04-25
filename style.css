@@ -1138,8 +1138,343 @@ input[type=number]::-webkit-outer-spin-button {
   text-transform: uppercase;
   cursor: pointer;
   transition: opacity .3s ease;
+  cursor: pointer;
 }
 
 #button-continue:hover {
   opacity: .9;
+}
+
+/* errors */
+
+.error-name,
+.error-last-name,
+.error-address,
+.error-city,
+.error-zip,
+.error-country,
+.error-state,
+.error-ages,
+.error-sex,
+.error-eth,
+.error-type,
+.error-height,
+.error-weight {
+  margin-top: 4px;
+  color: #D52C43;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.error-state.hidden,
+.error-country.hidden,
+.error-zip.hidden,
+.error-city.hidden,
+.error-address.hidden,
+.error-name.hidden,
+.error-last-name.hidden,
+.error-ages.hidden,
+.error-sex.hidden,
+.error-eth.hidden,
+.error-type.hidden,
+.error-height.hidden,
+.error-weight.hidden {
+  display: none;
+}
+
+/* form part 2 */
+
+.form-page .form .form-block-two .two-name-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-page .form .form-block-two .two-name-box label {
+  width: calc((100% - 16px) / 2);
+}
+
+.form-page .form .form-block-two .two-name-box input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #8FABCF;
+  background: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.form-page .form .form-block-two .two-address-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-page .form .form-block-two .two-address-box label {
+  width: 100%;
+}
+
+.form-page .form .form-block-two .two-address-box input {
+  width: 100%;
+  padding: 14px 14px 14px 32px;
+  border-radius: 8px;
+  border: 1px solid #8FABCF;
+  background: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  background-image: url(./images/field.svg);
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-position: left 10px center;
+}
+
+.form-page .form .form-block-two .two-city-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-page .form .form-block-two .two-city-box label {
+  width: calc((100% - 16px) / 2);
+}
+
+.form-page .form .form-block-two .two-city-box input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #8FABCF;
+  background: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.form-page .form .form-block-two .two-country-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-page .form .form-block-two .two-country-box .select-wrap {
+  width: calc((100% - 16px) / 2);
+}
+
+.form-page .form .form-block-two .two-country-box select {
+  -webkit-appearance: none; /* отключает стандартное отображение Safari */
+  appearance: none;
+  width: 100%;
+  padding: 14px 40px 14px 14px;
+  border-radius: 8px;
+  border: 1px solid #8FABCF;
+  background: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #757575;
+  background-image: url(./images/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: center right 14px;
+}
+
+.form-page .form .form-block-two .two-country-box select.selected {
+  color: #263856;
+}
+
+.form-page .form .form-block-two textarea {
+  width: 100%;
+  height: 88px;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #8FABCF;
+  background: #FFF;
+  font-family: "SF Pro Text", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  resize: none;
+  margin-bottom: 32px;
+}
+
+.form-page .form .form-block-two .nota {
+  width: 100%;
+  border-radius: 8px;
+  background: rgba(122, 184, 255, 0.10);
+  padding: 24px 32px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 32px;
+}
+
+.form-page .form .form-block-two .nota-head {
+  width: 100%;
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.form-page .form .form-block-two .nota-head > h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+#button-sub {
+  width: 100%;
+  max-width: 216px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 14px 24px;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.00);
+  background: #4582C9;
+  color: #FFF;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity .3s ease;
+  cursor: pointer;
+}
+
+#button-sub:hover {
+  opacity: .9;
+}
+
+.break {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .form-page .form .form-block-one,
+  .form-page .form .form-block-two {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .form-page .form .form-block-one > h2,
+  .form-page .form .form-block-two > h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+  .form-page .form .form-block-one.hidden,
+  .form-page .form .form-block-two.hidden {
+    max-height: 76px;
+  }
+
+  .form-page .form .form-block-one > .block-one_sex h3,
+  .form-page .form .form-block-one > .block-one_hw h3,
+  .form-page .form .form-block-one > .block-one_ethn h3,
+  .form-page .form .form-block-one > .block-one_age h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+    margin-bottom: 16px;
+  }
+
+  .form-page .form .form-block-one > .block-one_sex > .sex-box-inputs {
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  .form-page .form .form-block-one > .block-one_ethn > .ethn-box-inputs label {
+    width: auto;
+    padding: 8px;
+  }
+
+  .form-page .form .form-block-one > .block-one_ethn > .ethn-box-inputs input {
+    width: 24px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .form-page .form .form-block-one > .block-one_ethn > .ethn-box-inputs input::before {
+    width: 24px;
+    height: 24px;
+    /* top: -2px; */
+  }
+
+  .form-page .form .form-block-one > .block-one_ethn > .ethn-box-inputs input:checked:before {
+    background-size: 100%;
+  }
+
+  .form-page .form .form-block-one > .block-one_sex > .sex-box-inputs label {
+    padding: 8px 12px;
+    border-radius: 30px;
+  }
+
+  .form-page .form .form-block-one > .block-one_hws > .hws-box-inputs {
+    width: 100%;
+    column-gap: 12px;
+  }
+
+  .form-page .form .form-block-one > .block-one_hws > .hws-box-inputs label {
+    padding: 8px 12px;
+    border-radius: 30px;
+    width: calc((100% - 12px) / 2);
+    max-width: 172px;
+  }
+
+  .form-page .form .form-block-one > .block-one_hws {
+    margin-bottom: 16px;
+  }
+
+  .form-page .form .form-block-one > .block-one_hw {
+    padding: 40px 20px;
+    width: calc(100% + 40px);
+    border-radius: 0;
+  }
+
+  .break {
+    display: block;
+  }
+
+  /* second block */
+
+  .form-page .form .form-block-two .two-name-box {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .form-page .form .form-block-two .two-name-box label {
+    width: 100%;
+  }
+
+  .form-page .form .form-block-two .two-city-box {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .form-page .form .form-block-two .two-city-box label {
+    width: 100%;
+  }
+
+  .form-page .form .form-block-two .two-country-box {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .form-page .form .form-block-two .two-country-box .select-wrap {
+    width: 100%;
+  }
+
 }

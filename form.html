@@ -33,8 +33,9 @@
           <div class="block-one_age">
             <h3>Age</h3>
             <label for="ages">
-              <input id="ages" type="number" min="1" max="120" />
+              <input name="ages" id="ages" type="number" min="1" max="120" />
             </label>
+            <p class="error-ages hidden">This field is required</p>
           </div>
 
           <div class="block-one_sex">
@@ -61,6 +62,7 @@
                 <p>Prefer not to say</p>
               </label>
             </div>
+            <p class="error-sex hidden">This field is required</p>
           </div>
 
           <div class="block-one_ethn">
@@ -143,6 +145,7 @@
                 <p>Prefer not to say</p>
               </label>
             </div>
+            <p class="error-eth hidden">This field is required</p>
           </div>
 
           <div class="block-one_hws">
@@ -168,14 +171,16 @@
                 <p>Metric</p>
               </label>
             </div>
+            <p class="error-type hidden">This field is required</p>
           </div>
 
           <div class="block-one_hw">
             <div class="hw-one-box">
-              <h4>Height   <span>12 inches per foot, 5ft = 60 inches</span></h4>
+              <h4>Height   <span><br class="break">12 inches per foot, 5ft = 60 inches</span></h4>
               <div class="hw-one-box-inputs">
                 <label for="height-one">
                   <input
+                    name="height-one"
                     id="height-one"
                     type="number"
                     placeholder="foot"
@@ -184,6 +189,7 @@
                 </label>
                 <label for="height-two">
                   <input
+                    name="height-two"
                     id="height-two"
                     type="number"
                     placeholder="inch"
@@ -191,13 +197,21 @@
                   />
                 </label>
               </div>
+              <p class="error-height hidden">This fields is required</p>
             </div>
 
             <div class="hw-two-box">
               <h4>Weight</h4>
               <label for="weight">
-                <input id="weight" type="number" placeholder="pound" min="1" />
+                <input
+                  name="weight"
+                  id="weight"
+                  type="number"
+                  placeholder="pound"
+                  min="1"
+                />
               </label>
+              <p class="error-weight hidden">This field is required</p>
             </div>
           </div>
 
@@ -206,42 +220,128 @@
 
         <fieldset class="form-block-two hidden">
           <h2>2. Shipping details</h2>
-          <div>
+
+          <div class="two-name-box">
             <label for="name">
-              <input id="name" type="text" required />
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="First name*"
+                required
+              />
+              <p class="error-name hidden">
+                This field is required
+              </p>
             </label>
             <label for="last-name">
-              <input id="last-name" type="text" required />
+              <input
+                id="last-name"
+                name="last-name"
+                type="text"
+                placeholder="Last name*"
+                required
+              />
+              <p class="error-last-name hidden">
+                This field is required
+              </p>
             </label>
           </div>
-          <div>
-            <label for="adress">
-              <input id="adress" type="text" required />
+
+          <div class="two-address-box">
+            <label for="address">
+              <input
+                id="address"
+                name="address"
+                type="text"
+                placeholder="Address 1*"
+                required
+              />
+              <p class="error-address hidden">
+                This field is required
+              </p>
             </label>
-            <label for="adress-two">
-              <input id="adress-two" type="text" />
+            <label for="address-two">
+              <input
+                id="address-two"
+                name="address-two"
+                type="text"
+                placeholder="Address 2 (optional)"
+              />
             </label>
           </div>
-          <div>
+
+          <div class="two-city-box">
             <label for="city">
-              <input id="city" type="text" required />
+              <input
+                id="city"
+                name="city"
+                type="text"
+                placeholder="City*"
+                required
+              />
+              <p class="error-city hidden">
+                This field is required
+              </p>
             </label>
             <label for="zip">
-              <input id="zip" type="text" required />
+              <input
+                id="zip"
+                name="zip"
+                type="text"
+                placeholder="Zip code*"
+                required
+              />
+              <p class="error-zip hidden">
+                This field is required
+              </p>
             </label>
           </div>
-          <div>
+
+          <div class="two-country-box">
+
+            <div class="select-wrap">
             <select id="country" name="country" required>
-              <option value="" disabled selected>country</option>
+              <option name="country" value="" disabled selected>Country*</option>
             </select>
-            <select id="state" name="state" required>
-              <option value="" disabled selected>state</option>
-            </select>
+
+            <p class="error-country hidden">
+              This field is required
+            </p>
+
           </div>
 
-          <textarea name="note" id="note" cols="30" rows="3"> </textarea>
+          <div class="select-wrap">
+            <select id="state" name="state" required>
+              <option name="state" value="" disabled selected>State*</option>
+            </select>
 
-          <button type="submit">Submit</button>
+            <p class="error-state hidden">
+              This field is required
+            </p>
+          </div>
+
+          </div>
+
+          <textarea
+            name="note"
+            id="note"
+            cols="30"
+            rows="3"
+            placeholder="Your note for delivery"
+          ></textarea>
+
+          <div class="nota">
+            <div class="nota-head">
+              <img src="./images/note.svg" alt="note" />
+              <h3>Important notice</h3>
+            </div>
+            <p>
+              Return the kit within a few days of receiving it to ensure the
+              integrity of your sample.
+            </p>
+          </div>
+          <button type="submit" id="button-sub">Submit</button>
         </fieldset>
       </form>
     </section>

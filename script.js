@@ -21,3 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.getElementById("button").addEventListener("click", function(event) {
+  event.preventDefault();
+  window.location.href = "/form.html";
+});
