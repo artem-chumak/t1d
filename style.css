@@ -1476,5 +1476,56 @@ input[type=number]::-webkit-outer-spin-button {
   .form-page .form .form-block-two .two-country-box .select-wrap {
     width: 100%;
   }
+}
 
+
+/* SENT PAGE */
+
+.sent {
+  padding: 0 20px;
+}
+
+.sent-content {
+  width: 100%;
+  max-width: 768px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 96px 0;
+}
+
+.sent-content > h2 {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.sent-content > p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.sent-content > p > a {
+  color: #4582C9;
+  text-decoration: none;
+  transition: opacity .3s ease;
+}
+
+.sent-content > p > a:hover {
+  opacity: .8;
+}
+
+@media screen and (max-width: 767px) {
+.sent {
+  padding: 0 16px;
+}
+
+.sent-content {
+  padding: 64px 0;
+}
 }
